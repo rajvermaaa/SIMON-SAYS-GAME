@@ -60,9 +60,9 @@ function checkAns(idx) {
         }
     } else {
         h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br>  Press any key to start.`;
-        document.querySelector("body").backgroundImage = "url(background.png)";
+        document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function() {
-            document.querySelector("body").style.backgroundImage = "url(vecteezy_lost-writing-graffiti-design-on-a-white-background_.jpg)";
+            document.querySelector("body").style.backgroundColor = "white";
         }, 150);
         reset();
     }
@@ -88,7 +88,6 @@ for(btn of allBtns) {
 }
 
 function reset() {
-    backgroundImage =  "url(background.png)"; 
     started = false;
     gameSeq = [];
     userSeq = [];
